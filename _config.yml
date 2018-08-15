@@ -17,7 +17,7 @@ sidebar-avatar: /img/青岛海边.jpg      # use absolute URL, seeing it's used 
 
 
 # SNS settings
-RSS: false
+RSS: true
 # github_username:    usherbob
 Linkedin_username:    王加华
 #twitter_username:   14291254@bjtu.edu.cn
