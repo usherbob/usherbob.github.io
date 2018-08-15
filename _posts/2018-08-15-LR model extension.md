@@ -33,26 +33,5 @@ def calc_grad(X, Y, theta):
 
 ## 推导过程
 
-这道题目中对于label为-1和1的情况下，LR的模型的推导困惑了我很长时间。
-
-从LR回归的本质来讲，利用sigmoid函数将 $ \theta ^Tx $ 映射为0，1值，而本题目中，label则为-1和1，因此需要对sigmoid的值域做一个映射，这里采取
-
-$ 2f(x)-1 $ 将函数值映射为 -1，1值，$$ y=\left\{\begin{matrix} 1,z>0\\ 0,z=0\\ -1,z<0 \end{matrix}\right.$$ 其中，$ z = \theta ^Tx $ 
-
-因此，可以进行如下推导，由 $   y = \frac{2}{1+e^{-z}}-1 \tag{1}$  
-
-由$(1)$可得到 $$   P(y=-1| z)= \frac{e^z}{1+e^z} $$ $$ P(y=1| z)= \frac{1}{1+e^z} $$  
-
-因此，利用极大似然法，我们可以得出其对数极大似然函数为$$   L(z) = ( \frac{e^{z}}{1+e^z})^{I[y=-1]}\cdot ( \frac{1}{1+e^{z}})^{I[y=1]} \tag{2} $$ 
-
-则对数极大似然函数为 $$   l(z) = (ln(1+exp(z))-z){I[y=-1]}\cdot ( ln(1+e^{z})){I[y=1]} \tag{3}$$  
-
-由于label，即y的值域，$(3)$可以写为 $$   l(z) = (ln(1+e^{-yz})+yz){I[y=-1]}\cdot  ln (1+e^{-yz}){I[y=1]} \tag{4}$$   
-
-利用$ l  n(1+e^{\mu })) = ln(1+e^{-\mu }) + \mu $   
-
-可将$(4)$化为如下形式，$$   l(z) = ln(1+e^{yz}){I[y=-1]}\cdot ln (1+e^{yz}){I[y=1]} \tag{5}$$  
-
-即为 $$   l(z) = ln(1+e^{yz}) \tag{6}$$   
-
-式$(6)$即为本体中所沿用目标函数
+![ps2-1-1](https://github.com/usherbob/usherbob.github.io/tree/master/img/ps2-1-1.jpg)
+![ps2-1-2](https://github.com/usherbob/usherbob.github.io/tree/master/img/ps2-1-2.jpg)
