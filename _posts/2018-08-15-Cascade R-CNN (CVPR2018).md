@@ -35,7 +35,7 @@ tags:
 
 ensemble，或者更好一些，cascade不同IoU 阈值的models，逐步的提升detector的效果。
 
-## object detection
+## Object Detection
 
 在这之前，我并没有系统的梳理过 object detection 的模型、方法，本篇文章中则很好的对现有几种方法进行了整理。 首先，所有模型可以分为
 
