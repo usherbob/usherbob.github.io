@@ -21,19 +21,15 @@ tags:
 
 首先要说明什么是IoU阈值，detector画出的bounding box中可能含有30%、50%、70%的被检测物体，我们需要设置一个阈值，从而能够高效的分离正负样例。
 
-然而阈值设置的过大或过小会带来诸多问题，阈值过小时，会导致detector对于positive proposal的识别能力降低，并且引入大量负样例，导致模型训练时间增长；
-
-但阈值设置太大，同样会导致一些问题：
+然而阈值设置的过大或过小会带来诸多问题，阈值过小时，会导致detector对于positive proposal的识别能力降低，并且引入大量负样例，导致模型训练时间增长；但阈值设置太大，同样会导致一些问题：
 
 - 1) overfitting during training, 正例样本会大量减少；
 
 - 2) IoU mismatch, 不同的IoU阈值适用于不同的样本集。
 
-![](/ img / cascade r-cnn-1.png)
+![](/img/cascade-r-cnn-1.png)
 
-作者通过实验证明了不同的IoU阈值需要根据positive proposal中的IoU来确定，过大或者过小都会导致一些问题，那么如何确定一个普适的，generalized model？
-
-ensemble，或者更好一些，cascade不同IoU 阈值的models，逐步的提升detector的效果。
+作者通过实验证明了不同的IoU阈值需要根据positive proposal中的IoU来确定，过大或者过小都会导致一些问题，那么如何确定一个普适的，generalized model？ensemble，或者更好一些，cascade不同IoU 阈值的models，逐步的提升detector的效果。
 
 ## Object Detection
 
@@ -57,9 +53,9 @@ ensemble，或者更好一些，cascade不同IoU 阈值的models，逐步的提�
 
 ## Reference
 
-Zhaowei Cai, Nuno Vasconcelos, Cascade R-CNN: Delving into High Quality Object Detection
+- 1) Zhaowei Cai, Nuno Vasconcelos, Cascade R-CNN: Delving into High Quality Object Detection
 
-https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e
+- 2) https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e
 
 
 
