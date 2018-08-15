@@ -33,5 +33,5 @@ def calc_grad(X, Y, theta):
 
 ## 推导过程
 
-![ps2-1-1](https://github.com/usherbob/usherbob.github.io/tree/master/img/ps2-1-1.jpg)
-![ps2-1-2](https://github.com/usherbob/usherbob.github.io/tree/master/img/ps2-1-2.jpg)
+![](/img/ps2-1-1.jpg)
+![](/img/ps2-1-2.jpg)
