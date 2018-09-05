@@ -11,7 +11,7 @@ tags:
     - algorithm
 ---
 
->**BP algorithm of fully connected network**最近，由于在看论文的过程中，我发现自己对于CNN的基本结构不是很熟悉，单独抽了一段时间，强化一下自己的基础知识。我的主要参考文献是Neural Networks and Deep Learning, Michael Nielson, 在此附上原文链接
+>**BP algorithm of fully connected network**最近，由于在看论文的过程中，我发现自己对于CNN的基本结构不是很熟悉，单独抽了一段时间，强化一下自己的基础知识。我的主要参考文献是Neural Networks and Deep Learning, Michael Nielson, 附上原文链接
 http://neuralnetworksanddeeplearning.com/index.html
 
 # 内容
