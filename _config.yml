@@ -100,3 +100,5 @@ service-worker: true
   #      href: "http://zhengwuyang.com"
   #  },{
 #]
+
+theme: jekyll-theme-minimal
