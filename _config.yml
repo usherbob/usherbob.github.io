@@ -20,7 +20,7 @@ sidebar-avatar: /img/avatar_Bob.jpg      # use absolute URL, seeing it's used in
 RSS: false
 github_username:    usherbob
 linkedin_username:    王加华
-twitter_username:   Usher Bob
+twitter_username:   Usher\ Bob
 
 
 
