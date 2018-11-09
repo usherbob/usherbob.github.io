@@ -6,6 +6,7 @@ date:       2018-08-15
 author:     加华
 header-img: img/machine_learning.jpg
 catalog: true
+mathjax: true
 tags:
     - Machine Learning
     - CS229

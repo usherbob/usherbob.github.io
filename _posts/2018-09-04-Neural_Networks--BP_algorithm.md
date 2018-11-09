@@ -6,6 +6,7 @@ date:       2018-09-04
 author:     加华
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
+mathjax: true
 tags:
     - deep learning
     - algorithm
