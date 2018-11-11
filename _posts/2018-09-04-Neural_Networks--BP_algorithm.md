@@ -19,9 +19,11 @@ tags:
 
 ## Definitions
 首先，我们需要一个对于neuron的高效的标号方式，
-![](/img/neuron_denotion.png){:height="50px" }
+![neuron_denotion](/img/neuron_denotion.png){:width="600px"}
 
-此图借鉴于Neural Networks and Deep Learning, Michael Nielson，然后，我们需要给出neuron的输入与输出间的关系，$ a^l_j = \sigma \left ( \sum _k w^l_{jk}a^{l-1}_k +b^l_j\right ) $其中的sigma函数可以是任意激活函数，如sigmoid函数。
+此图借鉴于Neural Networks and Deep Learning, Michael Nielson，然后，我们需要给出neuron的输入与输出间的关系， 
+$ a^l_j=\sigma\left(\sum_kw^l_{jk}a^{l-1}_k +b^l_j\right ) $
+其中的sigma函数可以是任意激活函数，如sigmoid函数。
 
 我们还需要给出loss函数，书中名为cost函数，此处定义为C。
 
