@@ -12,7 +12,10 @@ tags:
     - algorithm
 ---
 
-> We mostly derivate PCA method with the idea of maximize data variance. If you have ever watched machine learning video of Dr.Andrew Ng, you'll find that there's another impressive interpretation of PCA. We could understand PCA in the angle of orthogonal regression fit. Amazing, hmm. In this blog, I will refer one question of Stanford CS229 problem set and give my understanding of this question and how PCA could be derivated in this way.
+> 
+under updating 
+
+We mostly derivate PCA method with the idea of maximize data variance. If you have ever watched machine learning video of Dr.Andrew Ng, you'll find that there's another impressive interpretation of PCA. We could understand PCA in the angle of orthogonal regression fit. Amazing, hmm. In this blog, I will refer one question of Stanford CS229 problem set and give my understanding of this question and how PCA could be derivated in this way.
 
 ## Question
 ![image of question](/img/pca_quest.jpg)"source(http://cs229.stanford.edu/)" 
@@ -26,3 +29,5 @@ Also, you could get the same result through solving for the optimization problem
 $f_u(x) = \left \|| x-\alpha u \right \||^2 = \left ( x-\alpha u \right )^T\left ( x-\alpha u \right ) = x ^T x-2\alpha u^T x + \alpha^2 u^T u$
 $ \frac{\partial f_u\left ( x \right )}{\partial x} = -2 u^T x + 2u^Tu \alpha = 0$
 So, we have $ \alpha = u^Tx$, thus, the project point is $ x=u^Txu $ 
+
+
