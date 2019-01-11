@@ -92,23 +92,42 @@ Under Updating
 ![](/img/application_GDL.png 'source[2]'){:width="400px"}
 
 图是由什么构成的？首先是图的结构，指这些顶点与顶点之间相互连接的关系，其次，是顶点上的信息，拿社区网络分析的这张图为例子，每个顶点就代表一个用户主题，顶点之间连接的关系可能表示用户之间的关系，工作关系、同事关系等，顶点上的信息则表征着这个用户自己的特征，性别、年龄。
-![](/img/graph_structure.png 'source[2]'){:width="400px"}
+![](/img/graph_structure.png 'source[2]'){:width="600px"}
 
 ## 2. Basic Graph Theories
 
 ### A. Laplacian Matrix
 
 Laplacian matrix是图深度的spectra domain(类比与频域)处理方式的基础，GCN最早的形式就是通过对Laplacian matrix的特征值与特征向量作处理进行卷积操作。那么Laplacian matrix到底有什么直观的意义那？
-![](/img/laplacian_matrix.png 'source[2]'){:width="400px"}
+![](/img/laplacian_matrix.png 'source[2]'){:width="600px"}
 
 我们可以看到，我们定义的$ \Delta = D-W $算子可以很好的表征顶点与其周围邻居之间的关系，进而可以表现出图结构的smoothness。我们还可以参考博客[3]关注它的具体推推导。
 
 ### B. Orthogonal bases on graphs
 如果我们想要找到某个图结构中最smooth的一个正交基底怎么办？当然是熟悉的配方，我们需要对其进行正交分解，最smooth的一个正交基底就是最大特征值对应的特征向量。
-![](/img/eig_vec_lap.png 'source[2]'){:width="400px"}
+![](/img/eig_vec_lap.png 'source[2]'){:width="600px"}
 
 在文献[1]中有一个很好的例子告诉我们不同的特征向量在图的信息上究竟有什么对应。图中的$u_0, u_1, u_{50}$分别代表Laplacian matrix的特征向量，下标表示排序。其实这就像极了欧式空间中信号在fourier变换下的直流信号以及不同的高频信号。
-![](/img/eg_eigvec.png 'source[1]'){:width="400px"}
+![](/img/eg_eigvec.png 'source[1]'){:width="600px"}
+
+### C. Fourier analysis
+要想了解卷积，我们通常会先了解Fourier变换，这是因为变换后的频域特征具有很好的性质，时域下的卷积在频域中通过乘积即可实现。我们以Fourier 级数为例，欧氏空间下的Fourier级数，可以认为是函数$f(x)$与正交基底$$en = exp\left \{ i2n\pi x \right \} $$点积得到的[4]，即
+
+$$f(x) = \sum_{k=1 }^{n}<f(x), en> \cdot en $$
+
+其中，在Hilbert空间中的内积是这么定义的
+
+$$<f(x),en(x)> = \frac{1}{2\pi}\int_{-\pi}^{\pi} f(x)en(x)dx$$
+
+那么在图上的Fourier变换如何实现那？我们自然希望通过Laplacian矩阵的正交变换基来实现，通过图结构在不同频率基底的变换得到其变换结果。因此，自然的，我们可以借用Laplacian matrix的正交特征向量作为变换基底，图上的Fourier变换形式就出现了，
+
+$$ f = \sum_{k=1 }^{n}<f, \phi_n> \cdot \phi_n $$
+
+### D. Convolution
+上一节中，我们引出了Fourier级数，那如何作卷积那？
+
+## Spectra domain Geometric Deep Learniing Methods
+然而，不同于CNN，我们在一个graph的不同区域进行卷积时，我们不能使用固定的一个卷积核，这就使得我们需要给出一个函数来定义卷积核，
 
 # References
 
@@ -119,4 +138,6 @@ The Emerging Field of Signal Processing on Graphs: Extending High-Dimensional Da
 Geometric Deep Learning on Graphs and Manifolds
 
 [3] https://www.cnblogs.com/pinard/p/6221564.html#!comments
+
+[4] https://en.wikipedia.org/wiki/Fourier_series
 
