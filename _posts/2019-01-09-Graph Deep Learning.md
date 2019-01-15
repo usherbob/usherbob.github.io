@@ -4,17 +4,18 @@ title:      Graph Deep Learning
 subtitle:   for beginners
 date:       2018-12-23
 author:     加华
-header-img: img/Graph_DL.jpeg
+header-img: img/post-bg-ios9-web.jpg
 catalog: true
 mathjax: true
 tags:
     - deep learning
     - graph
 ---
+> 建议先从第二部分NIPS Tutorial-Geometric Deep Learning on Graphs and Manifolds开始读，第一部分的排版有待完善。
 
 # Preface
 
-在调研图深度的过程中，从零开始起步，将自己的论文总结记录在这里。
+在调研图深度的过程中，从零开始起步，将自己读过的论文总结记录在这里。
 
 # The Emerging Field of Signal Processing on Graphs[1]
 
